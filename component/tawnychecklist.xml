@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<name>Tawny Checklist</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>July 2020</creationDate>
+	<author>Alison Keen</author>
+	<authorEmail>ali.keen@gmail.com</authorEmail>
+	<authorUrl>https://github.com/alisonkeen</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+  <!-- Basic functionality - add/edit questions, add/edit policices
+       is still not all there yet. When it's all working that will be v1 --> 
+	<version>0.0.140</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Generate and display Tawny checklists</description>
+
+
+	<install> <!-- Runs on install -->
+	<sql>
+		<file driver="mysql" charset="utf8mb4">sql/install.mysql.utf8mb4.sql</file>
+		</sql>
+	</install>
+	<update> <!-- Runs on update; New since J2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>tawnychecklist.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>helpers</folder>
+	</files>
+
+	<media destination="com_tawny" folder="media">
+		<folder>images</folder>
+	</media>
+
+	<administration>
+		<!-- This menu shows up under "Components" when logged in to backend -->
+		<menu>Tawny</menu>
+		<submenu>
+			<menu view='checklist'>View Checklists</menu>
+			<menu view='questions'>Edit Questions</menu>
+			<menu view='parties'>Political Parties</menu>
+ 		</submenu>
+
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>tawnychecklist.php</filename>
+			<filename>controller.php</filename>
+			<folder>views</folder>
+			<folder>sql</folder>
+			<folder>helpers</folder>
+
+
+		</files>
+	</administration>
+
+</extension>

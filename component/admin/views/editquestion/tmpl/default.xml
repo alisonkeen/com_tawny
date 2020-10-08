@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Edit Question">
+		<message>Modify details of a question</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+			<field
+				name="question_id"
+				type="list"
+				label="Which question?"
+				description="Question ID for which question to display and edit"
+				default="0"
+				>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

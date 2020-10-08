@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Display Rationale">
+		<message>Display reasons for a tick or cross on the checklist</message>
+	</layout>
+	<fields name="request">
+		<field
+				name="jurisdiction_id"
+				type="list"
+				label="Which State"
+				description="Which state checklist to display"
+				default="0"
+				>
+                    <option value="1">ACT</option>
+                    <option value="2">NSW</option>
+                    <option value="3">VIC</option>
+                    <option value="4">QLD</option>
+                    <option value="5">SA</option>
+                    <option value="6">WA</option>
+                    <option value="7">TAS</option>
+                    <option value="8">NT</option>
+                    <option value="9">Federal</option>
+		</field>
+		<field
+				name="question_id"
+				type="number"
+				label="QuestionID"
+				description="Which Question to display info about"
+        min="1"
+        max="200"
+				default="1"
+        step="1"
+				/>
+	</fields>
+</metadata>

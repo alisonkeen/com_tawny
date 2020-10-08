@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Display Checklist">
+		<message>Display an election checklist</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="jurisdiction">
+			<field
+				name="jurisdiction_id"
+				type="list"
+				label="Choose A State"
+				description="Which state checklist to display"
+				default="0"
+				>
+                    <option value="1">ACT</option>
+                    <option value="2">NSW</option>
+                    <option value="3">VIC</option>
+                    <option value="4">QLD</option>
+                    <option value="5">SA</option>
+                    <option value="6">WA</option>
+                    <option value="7">TAS</option>
+                    <option value="8">NT</option>
+                    <option value="9">Federal</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

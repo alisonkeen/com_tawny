@@ -1,17 +1,19 @@
 
 # Election Checklist Module
 
-This module was written for creating ACVI "christian values" pre-election checklists under Joomla 3.0. Election Checklists are a way of giving people a quick read on what the different parties' policies are on different issues to help everyone make an informed decision (and sometimes, to draw attention to issues our major parties are trying to ignore).
+This module was written for creating pre-election checklists under Joomla 3.0. Election Checklists are a way of giving people a quick read on what the different parties' policies are on different issues to help everyone make an informed decision (and sometimes, to draw attention to issues our major parties are trying to ignore).
 
-The ACVI has historically focused on abortion, euthanasia, gambling, freedom of religion, drug abuse, and freedom to teach our kids about our heritage as a christian country. 
+The source code only includes (i think two?) questions as demo data. If you wanted to use this code, you would need to either manually run SQL queries to feed data into the database (that's how i was using it), or write a pretty front-end. I will get around to writing a back-end, and building a cache function for the front-end, eventually... (a checklist with five parties and twenty questions was running over a hundred queries to populate all the data points! I apologise, it should be more like five...)  
+
+*Front End/UI*: 
 
 This Joomla component has a  "checklist" view, and the ticks, crosses and question marks link to a "rationale" view that shows the background to each rating (past votes in parliament and public statements of policy). 
 
 
 ## To install: 
-1. zip up the "component" folder (e.g. into a file called com_tawny.zip)
+1. zip up the "component" folder (e.g. into a file called com_tawny.zip, whatever you like really)
 2. On a Joomla server, log in as Administrator and go to "Extensions" (top menus) and then "manage" 
-3. Drag and drop the zip file into the box that says "upload & install" 
+3. Drag and drop the zip file you just made, into the box that says "upload & install" 
 
 ## To use: 
 From memory, there should be one or two questions in a nearly-empty checklist. 
